@@ -3,6 +3,7 @@ import  Head from 'next/head'
 import Nav from './NavBar/Nav'
 import Footer from './Footer/Footer'
 import { SessionProvider } from 'next-auth/react'
+import Banner from './Banner/Banner'
 function Layout({children}) {
   return (
         <>
@@ -10,6 +11,7 @@ function Layout({children}) {
                 <header>
                     <Nav/>
                 </header>
+                       
                     <main>
                        {children}
                     </main>

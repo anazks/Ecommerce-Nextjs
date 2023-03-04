@@ -15,7 +15,6 @@
   margin-top: 10px;
   height: 90px;
   background-color:rgb(86, 82, 82);
-  position: absolute;
   bottom: 0;
 
 }
@@ -28,11 +27,15 @@
 }
 .NavCart{
     position: absolute;
-    right: 14%;
+    right:25%;
 }
 .Login{
   position: absolute;
-  right: 6%;
+  right: 14%;
+}
+.userName{
+  position: absolute;
+  right: 8%;
 }
 .navSearch{
   width:320px;
@@ -190,4 +193,30 @@
 .Register input{
   width: 100%;
   height: 10%;
+}
+.dropdowncontent{
+  display: none;
+  position: absolute;
+  background-color: #151414;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 10px;
+  z-index: 1;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+.banner{
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  margin-top: 10px;
+}
+.banner img{
+  height: 100%;
+  width: 100%;
 }

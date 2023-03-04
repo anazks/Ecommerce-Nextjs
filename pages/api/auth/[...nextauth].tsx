@@ -13,8 +13,12 @@ export default NextAuth ({
                     const {email,password} = credentials;
                     console.log(email,password)
                     console.log(credentials,"credential.............")
-                    var user = await Usermodel.find({email,password})
-                    console.log(user,"retun value")
+                    var [userData] = await Usermodel.find({email,password})
+                    console.log(userData,"userData----")
+                    let user ={
+                        email: [userData.email,userData.mobile,userData.password,userData.userName,userData._id],
+                       
+                    }
                     return user;
                   },
             })

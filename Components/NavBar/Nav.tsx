@@ -5,8 +5,9 @@ import {useSession,signOut} from 'next-auth/react'
 
 function Nav() {
   const session = useSession();
-  console.log(session)
+
   let {data}= useSession()
+  console.log(data)
   return (
     <div className={styles.navBar}>
             <ul>
@@ -26,10 +27,18 @@ function Nav() {
                  { data?.user?(
                  <>
                   <li> 
-                  <Link href="/" className={styles.Login}>{ data?.user?.email}</Link>
+                  
+                  <Link href="/" className={styles.userName}>
+                    <div className={styles.dropdown}>
+                        <span>{ data?.user?.email[3]}</span>
+                        <div className={styles.dropdowncontent}>
+                          
+                        <Link href="/" onClick={()=>signOut()}  >Logout</Link>
+                        </div>
+                    </div>        
+                  </Link>
                   </li> 
                     <li> 
-                    <Link href="/" className={styles.Login} onClick={()=>signOut()}  >Logout</Link>
                     </li> 
                     </>
                  ):(
